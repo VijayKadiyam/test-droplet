@@ -21,9 +21,9 @@ jobs:
       - name: Deploy App
         uses: appleboy/ssh-action@master
         with:
-          host: "64.227.135.20"
-          key: ${{secrets.SSH_KEY}}
-          username: root
+          host: ${{ secrets.SSH_HOST }}
+          key: ${{ secrets.SSH_KEY }}
+          username: ${{ secrets.SSH_USERNAME }}
           script: |
             mkdir /var/www/vhosts/test
             git pull https://github.com/VijayKadiyam/test-droplet.git
