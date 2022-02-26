@@ -27,8 +27,7 @@ jobs:
           script: |
             cd /var/www/vhosts/test
             git pull https://github.com/VijayKadiyam/test-droplet.git
-            echo 'Deployment Done'
-            echo ${{secrets.SSH_HOST}}
+            echo 'Deployment Done"
         
       
           
